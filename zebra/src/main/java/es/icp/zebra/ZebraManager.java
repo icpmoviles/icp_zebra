@@ -63,10 +63,14 @@ public class ZebraManager {
 
     private RfidEventsListener eventsListener;
 
-    public ZebraManager (Context context, ListenerConexion listenerConexion){
+    public ZebraManager (Context context) {
         this.context = context;
-        this.listenerConexion = listenerConexion;
         MyLog.setDEBUG(true);
+    }
+
+    public ZebraManager (Context context, ListenerConexion listenerConexion){
+        this(context);
+        this.listenerConexion = listenerConexion;
     }
 
 
