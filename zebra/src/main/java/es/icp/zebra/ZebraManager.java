@@ -68,12 +68,6 @@ public class ZebraManager {
         MyLog.setDEBUG(true);
     }
 
-    public ZebraManager (Context context, ListenerConexion listenerConexion){
-        this(context);
-        this.listenerConexion = listenerConexion;
-    }
-
-
     public ArrayList<ReaderDevice> getLectores (){
         Readers readers = new Readers(context, ENUM_TRANSPORT.BLUETOOTH);
         readersListArray = new ArrayList<>();
